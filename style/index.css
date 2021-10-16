@@ -20,6 +20,9 @@
   width: 200px;
   height: 200px;
 }
+.profile:hover{
+  box-shadow: 1px 1px 16px;
+}
 .chidcolprof{
   padding: 20px;
 }
