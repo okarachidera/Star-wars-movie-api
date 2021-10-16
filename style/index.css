@@ -1,0 +1,68 @@
+*, body, html{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #f1f1f1;
+    text-decoration: none;
+}
+body{
+  background: url("../images/bg.jpeg");
+  background-color: #100013;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+}
+.main{
+  background-color: rgba(0, 0, 0, 0.342);
+  padding-bottom: 100px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.col-class {
+  background-color: #f1f1f1;
+  width: 400px;
+  margin: 35px;
+  /* padding-top: 30px; */
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  background: url("../images/lukeskywalk.jpeg");
+  object-fit: contain;
+  border-radius: 4px;
+}
+.h3-dark{
+  background-color: rgba(4, 1, 14, 0.623);
+  color: #f1f1f1;
+  /* margin: 30px; */
+  margin-top: 400px;
+}
+.h1-dark{
+  color: #f1f1f1;
+  text-align: center;
+}
+.h1-dark{
+  font-size: 50px;
+}
+.btn-cha{
+  background-color: rgba(44, 0, 54, 0.795);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 20px;
+  color: #f1f1f1;
+  border-radius: 100px;
+  border: none;
+}
+.ptag{
+  font-size: 20px;
+}
+/* .details-cha{
+  display: none;
+} */
