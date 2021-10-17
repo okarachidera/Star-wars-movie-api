@@ -60,7 +60,7 @@ fetch('https://swapi.dev/api/people')
             <div class="col-sm-6 chidcolprof" >            
             <h5 class="card-title">Name: ${newresult[i]['name']}</h5>
             <h5 class="card-title">Gender: ${newresult[i]['gender']}</h5>
-            <h5 class="card-title">Height: ${newresult[i]['height']}</h5>
+            <h5 class="card-title">Height: ${newresult[i]['height']}cm</h5>
             </div>
             </div>
             </div>
