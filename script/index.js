@@ -3,13 +3,14 @@
 // }
 
 // module.exports = {main}
-// let fname=document.getElementById('fname')
-// fname.innerHTML='chidera'
 let containEl=document.getElementById('containck');
 let tempdata=''
-// let h1El= document.getElementById('h1-id')
-// let detialsEl=document.getElementById('details-cha')
 let colClass=document.querySelector('.col-class');
+
+
+let searchEl=document.getElementById('searchcha')
+let testEl=document.getElementById('testval')
+
 
 
 
@@ -20,11 +21,16 @@ fetch('https://swapi.dev/api/people')
 .then(res => res.json())
 
 .then(data => {
-    let viewBtn=''
 
     let newresult=data['results']
 
     for (let i = 0; i < newresult.length; i++) {
+
+        // if (newresult[i]['name']==searchEl.value) {
+        //     console.log('found it');
+        // }else{
+        //     console.log('cjsdhdh')
+        // }
         
         containEl.innerHTML+=`
         <div class="col-sm-4 chicol">
@@ -35,7 +41,7 @@ fetch('https://swapi.dev/api/people')
         >
         <div class="card-body">
             <h5 class="card-title">${newresult[i]['name']}</h5>
-            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal${i}">
+            <a href="#" class="btn btn-primary rounded-pill" data-toggle="modal" data-target="#exampleModal${i}">
             View Detials
             </a>
         </div>
@@ -90,3 +96,22 @@ fetch('https://swapi.dev/api/people')
     });
 
 
+
+
+var mybutton = document.getElementById("myBtn");
+
+window.onscroll = () =>{scrollFunction()};
+
+let scrollFunction=()=>{
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+let topFunction=() =>{
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
