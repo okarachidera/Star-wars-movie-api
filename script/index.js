@@ -26,14 +26,8 @@ fetch('https://swapi.dev/api/people')
 
     for (let i = 0; i < newresult.length; i++) {
 
-        // if (newresult[i]['name']==searchEl.value) {
-        //     console.log('found it');
-        // }else{
-        //     console.log('cjsdhdh')
-        // }
-        
         containEl.innerHTML+=`
-        <div class="col-sm-4 chicol">
+        <div class="col-sm-4 chicol text-center">
         <div class="card">
         <img src="images/${i+1}.jpeg" class="card-img-top"
         height="360px"
