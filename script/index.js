@@ -23,13 +23,14 @@ fetch('https://swapi.dev/api/people')
 
 .then(data => {
 
+  if (data) {
+    
     let newresult=data['results']
-
-    if(Object.keys(data['results']).length){
+  
       for (let i = 0; i < newresult.length; i++) {
     
           containEl.innerHTML+=`
-          <div class="col-sm-4 chicol text-center">
+          <div class="col-sm-4 chicol ">
           <div class="card">
           <img src="images/${i+1}.jpeg" class="card-img-top"
           height="360px"
@@ -88,10 +89,11 @@ fetch('https://swapi.dev/api/people')
     
           
     }
-
   }else{
-    errmsg.innerHTML="Please Reload Website";
+    errmsg.innerHTML='Reload page'
   }
+
+
 
 
     
@@ -99,8 +101,7 @@ fetch('https://swapi.dev/api/people')
 
 
 
-
-var mybutton = document.getElementById("myBtn");
+let mybutton = document.getElementById("myBtn");
 
 window.onscroll = () =>{scrollFunction()};
 
@@ -113,7 +114,7 @@ let scrollFunction=()=>{
 }
 
 // When the user clicks on the button, scroll to the top of the document
-let topFunction=() =>{
+const topFunction=() =>{
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
@@ -121,11 +122,11 @@ let topFunction=() =>{
 
 let myVar;
 
-function myFunction() {
+const myFunction=()=> {
   myVar = setTimeout(showPage, 3000);
 }
 
-function showPage() {
+const showPage=()=> {
   document.getElementById("loader").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
 }
