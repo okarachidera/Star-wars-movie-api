@@ -72,6 +72,7 @@ fetch('https://swapi.dev/api/people')
       </div>
 
 
+    
       
     
 
@@ -109,3 +110,4 @@ let topFunction=() =>{
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
