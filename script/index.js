@@ -1,16 +1,8 @@
-// function main(){
 
-// }
-
-// module.exports = {main}
 let containEl=document.getElementById('containck');
-let tempdata=''
-let colClass=document.querySelector('.col-class');
-
-
 let searchEl=document.getElementById('searchcha')
 let testEl=document.getElementById('testval')
-let errmsg=document.getElementById('errmsg');
+let errMsg=document.getElementById('errmsg');
 
 
 
@@ -25,9 +17,9 @@ fetch('https://swapi.dev/api/people')
 
   if (data) {
     
-    let newresult=data['results']
+    const newResult=data['results']
   
-      for (let i = 0; i < newresult.length; i++) {
+      for (let i = 0; i < newResult.length; i++) {
     
           containEl.innerHTML+=`
           <div class="col-sm-4 chicol ">
@@ -37,7 +29,7 @@ fetch('https://swapi.dev/api/people')
            alt="..."
           >
           <div class="card-body">
-              <h5 class="card-title">${newresult[i]['name']}</h5>
+              <h5 class="card-title">${newResult[i]['name']}</h5>
               <a href="#" class="btn btn-primary rounded-pill" data-toggle="modal" data-target="#exampleModal${i}">
               View Detials
               </a>
@@ -61,9 +53,9 @@ fetch('https://swapi.dev/api/people')
               <img src="images/${i+1}.jpeg"  class="profile text-center" alt="">
               </div>
               <div class="col-sm-6 chidcolprof" >            
-              <h5 class="card-title">Name: ${newresult[i]['name']}</h5>
-              <h5 class="card-title">Gender: ${newresult[i]['gender']}</h5>
-              <h5 class="card-title">Height: ${newresult[i]['height']}cm</h5>
+              <h5 class="card-title">Name: ${newResult[i]['name']}</h5>
+              <h5 class="card-title">Gender: ${newResult[i]['gender']}</h5>
+              <h5 class="card-title">Height: ${newResult[i]['height']}cm</h5>
               </div>
               </div>
               </div>
@@ -72,32 +64,18 @@ fetch('https://swapi.dev/api/people')
               </div>
             </div>
           </div>
-        </div>
-    
-    
-      
-        
+        </div>  
       
     
           `
-    
-    
-    
-          
-    
-    
+
     
           
     }
   }else{
-    errmsg.innerHTML='Reload page'
+    errMsg.innerHTML='Reload page'
   }
-
-
-
-
-    
-    });
+ });
 
 
 

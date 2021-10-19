@@ -13,6 +13,7 @@
 .chicol:hover{
   /* border: black solid 2px; */
   box-shadow: 1px 1px 16px;
+  transition: transform .2s
 
 }
 .profile{
@@ -22,6 +23,8 @@
 }
 .profile:hover{
   box-shadow: 1px 1px 16px;
+  transition: transform .2s;
+
 }
 .chidcolprof{
   padding: 20px;
@@ -78,6 +81,8 @@
 
 #myBtn:hover {
   background-color: #555;
+  transition: transform .2s;
+
 }
 
 
@@ -172,4 +177,9 @@ body {
 #myDiv {
   display: none;
   text-align: center;
+}
+
+.footd-icon:hover{
+  transition: transform .2s;
+  transform: scale(1.5)
 }
