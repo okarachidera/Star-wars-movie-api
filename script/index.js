@@ -1,4 +1,3 @@
-
 let containEl=document.getElementById('containck');
 let searchEl=document.getElementById('searchcha')
 let testEl=document.getElementById('testval')
@@ -17,6 +16,8 @@ fetch('https://swapi.dev/api/people')
     const newResult=data['results']
   
       for (let i = 0; i < newResult.length; i++) {
+        let charaterProfile=newResult[i]
+        let{name, gender, height}=charaterProfile
     
           containEl.innerHTML+=`
           <div class="col-sm-4 chicol ">
@@ -26,7 +27,7 @@ fetch('https://swapi.dev/api/people')
            alt="..."
           >
           <div class="card-body">
-              <h5 class="card-title">${newResult[i]['name']}</h5>
+              <h5 class="card-title">${name}</h5>
               <a href="#" class="btn btn-primary rounded-pill" data-toggle="modal" data-target="#exampleModal${i}">
               View Detials
               </a>
@@ -50,9 +51,9 @@ fetch('https://swapi.dev/api/people')
               <img src="images/${i+1}.jpeg"  class="profile text-center" alt="">
               </div>
               <div class="col-sm-6 chidcolprof" >            
-              <h5 class="card-title">Name: ${newResult[i]['name']}</h5>
-              <h5 class="card-title">Gender: ${newResult[i]['gender']}</h5>
-              <h5 class="card-title">Height: ${newResult[i]['height']}cm</h5>
+              <h5 class="card-title">Name: ${name}</h5>
+              <h5 class="card-title">Gender: ${gender}</h5>
+              <h5 class="card-title">Height: ${height}cm</h5>
               </div>
               </div>
               </div>
@@ -94,13 +95,11 @@ const topFunction=() =>{
 
 
 let myVar;
+const myFunction=()=> myVar = setTimeout(showPage, 3000);
 
-const myFunction=()=> {
-  myVar = setTimeout(showPage, 3000);
-}
 
 const showPage=()=> {
-  document.getElementById("loader").style.display = "none";
+document.getElementById("loader").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
 }
 
