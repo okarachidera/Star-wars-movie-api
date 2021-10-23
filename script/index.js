@@ -20,7 +20,7 @@ fetch('https://swapi.dev/api/people')
         let{name, gender, height}=charaterProfile
     
           containEl.innerHTML+=`
-          <div class="col-sm-4 chicol ">
+          <section class="col-sm-4 chicol ">
           <div class="card">
           <img src="images/${i+1}.jpeg" class="card-img-top"
           height="360px"
@@ -33,7 +33,7 @@ fetch('https://swapi.dev/api/people')
               </a>
           </div>
           </div> 
-          </div>  
+          </section>  
           
     
           <div class="modal fade" id="exampleModal${i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
