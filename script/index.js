@@ -24,8 +24,7 @@ fetch('https://swapi.dev/api/people')
           <div class="card">
           <img src="images/${i+1}.jpeg" class="card-img-top"
           height="360px"
-           alt="..."
-          >
+           alt="${name}">
           <div class="card-body">
               <h5 class="card-title">${name}</h5>
               <a href="#" class="btn btn-primary rounded-pill" data-toggle="modal" data-target="#exampleModal${i}">
@@ -48,7 +47,7 @@ fetch('https://swapi.dev/api/people')
               <div class="modal-body">
               <div class="row">
               <div class="text-center col-sm-6">
-              <img src="images/${i+1}.jpeg"  class="profile text-center" alt="">
+              <img src="images/${i+1}.jpeg"  class="profile text-center" alt="${name}">
               </div>
               <div class="col-sm-6 chidcolprof" >            
               <h5 class="card-title">Name: ${name}</h5>
