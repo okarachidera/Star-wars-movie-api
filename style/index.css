@@ -183,3 +183,9 @@ body {
   transition: transform .2s;
   transform: scale(1.5)
 }
+
+@media screen and (min-width: 800px) {
+  #myDiv{
+    margin-top: 100px;
+  }
+}
