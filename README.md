@@ -1,7 +1,8 @@
 
 ## Problem Description:
 
-I created a SPA (single page application) using html, CSS and JavaScript. It shows all characters from a star wars API (https://swapi.dev/api/people).
+Created a SPA (single page application) using html, CSS and JavaScript. Shows all characters from a Star wars movie.
+API URL: (https://swapi.dev/api/people).
 
 ### Process
 
