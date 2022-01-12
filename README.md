@@ -3,6 +3,7 @@
 
 Created a SPA (single page application) using html, CSS and JavaScript. Shows all characters from a Star wars movie.
 API URL: (https://swapi.dev/api/people).
+URL: https://starwarsmovi.netlify.app/
 
 ### Process
 
